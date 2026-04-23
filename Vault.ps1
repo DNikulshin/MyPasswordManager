@@ -129,4 +129,31 @@ class PasswordVault {
         }
         Write-Host "DEBUG Vault: Файл сохранён: $($this.VaultFile)"
     }
+	
+    static [hashtable] LoadConfig() {
+        $configPath = Join-Path ([Environment]::GetFolderPath('UserProfile')) ".my_pm\config.json"
+        if (Test-Path $configPath) {
+            try {
+                $json = Get-Content $configPath -Raw -Encoding UTF8
+                $obj = $json | ConvertFrom-Json
+                $hash = @{}
+                $obj.PSObject.Properties | ForEach-Object { $hash[$_.Name] = $_.Value }
+                return $hash
+            } catch {}
+        }
+        # По умолчанию Ctrl+Shift+P
+        return @{
+            HotkeyModifiers = @{ Ctrl = $true; Shift = $true; Alt = $false }
+            HotkeyKey = "P"
+        }
+    }
+
+    static [void] SaveConfig([hashtable]$config) {
+        $configDir = Join-Path ([Environment]::GetFolderPath('UserProfile')) ".my_pm"
+        if (-not (Test-Path $configDir)) {
+            New-Item -Path $configDir -ItemType Directory -Force | Out-Null
+        }
+        $configPath = Join-Path $configDir "config.json"
+        $config | ConvertTo-Json | Set-Content -Path $configPath -Encoding UTF8 -Force
+    }
 }
