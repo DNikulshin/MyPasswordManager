@@ -1,0 +1,16 @@
+# Секреты и окружение
+.env
+.env.*
+!.env.example
+
+# Архивы
+*.zip
+
+# Файлы хранилища (создаются при работе приложения)
+*.secure
+config.json
+
+# Системные файлы
+Thumbs.db
+desktop.ini
+.DS_Store
