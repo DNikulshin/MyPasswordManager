@@ -112,7 +112,8 @@ PowerShell 5.1+ (предустановлен во всех актуальных
 
 📸 Скриншоты
 Окно входа	Главное окно	Настройки горячей клавиши	Выбор сервиса
-https://screenshots/login.png	https://screenshots/main.png	https://screenshots/settings.png	https://screenshots/select.png
+<img width="634" height="438" alt="image" src="https://github.com/user-attachments/assets/8aad88c8-a312-4fe3-92de-204798546b19" />
+
 ❓ Часто задаваемые вопросы
 В: Почему автозаполнение не работает в Блокноте?
 О: SendKeys может игнорироваться некоторыми примитивными приложениями. В браузерах, системных диалогах и большинстве программ всё работает корректно.
