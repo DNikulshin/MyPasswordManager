@@ -7,7 +7,8 @@
 Работает без установки сторонних программ, использует только PowerShell и .NET Framework.
 
 <p align="center">
-  <img src="screenshots/main_window.png" alt="Главное окно" width="600"/>
+  <img src="<img width="856" height="534" alt="image" src="https://github.com/user-attachments/assets/3926fe60-09e7-4edb-85cd-c3e44a6a4796" />
+" alt="Главное окно" width="600"/>
 </p>
 
 ## ✨ Возможности
